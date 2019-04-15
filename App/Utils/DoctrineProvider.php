@@ -16,7 +16,7 @@ class DoctrineProvider {
         $dotenv = Dotenv::create(__DIR__ . "/../../");
         $dotenv->load();
 
-        $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/../App/Models/"), getenv('DEBUG'));
+        $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__ . "/../Models/"), getenv('DEBUG'));
         // $config = Setup::createXMLMetadataConfiguration(array(__DIR__ . "//xml//"), getenv('DEBUG'));
         // $config = Setup::createYAMLMetadataConfiguration(array(__DIR__ . "/../../config/yaml"), getenv('DEBUG'));
        // var_dump($config) && die();          
