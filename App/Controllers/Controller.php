@@ -9,6 +9,9 @@ class Controller {
     protected $blade = null;
 
     public function __construct() {
-        $this->blade = new Blade('/var/www/composer/Resources/Views', '/var/www/composer/App/Storage/Cache/Views');
+        $root = __DIR__ . "/../../";
+        // var_dump($root . 'Resources/Views');
+        // die();
+        $this->blade = new Blade($root . 'Resources/Views', $root.'App/Storage/Cache/Views');
     }
 }

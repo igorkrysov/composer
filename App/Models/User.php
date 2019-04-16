@@ -90,4 +90,11 @@ class User {
         return $this->email;
     }
     
+    public function getPosts() {
+        return $this->posts;
+    }
+
+    public function getLessons() {
+        return $this->lessons;
+    }
 }

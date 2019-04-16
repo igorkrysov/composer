@@ -2,6 +2,7 @@
 
 $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
     $r->addRoute('GET', '/users', 'UserController@getUsers');
+    $r->addRoute('GET', '/user', 'UserController@getUser');
     $r->addRoute('GET', '/create-user', 'UserController@createUser');
     // {id} must be a number (\d+)    
 });

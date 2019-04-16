@@ -40,10 +40,10 @@ class Post {
  
     /**
      * Many Posts have one user.
-     * @ManyToOne(targetEntity="User", inversedBy="features")
+     * @ManyToOne(targetEntity="User", inversedBy="posts")
      * @JoinColumn(name="user_id", referencedColumnName="id")
      */
-    private $product;
+    private $user;
 
     public function __construct(\DateTime $createDate) {
         $this->localized = true;
@@ -56,5 +56,9 @@ class Post {
             $this->created->setTimeZone(new \DateTimeZone($this->timezone));
         }
          return $this->created;
+    }
+
+    public function getTitle() {
+        return $this->title;
     }
 }
